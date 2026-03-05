@@ -1,5 +1,5 @@
 import { Link } from "react-router";
-import { Menu, User, Clock, MapPin, Flame, Bookmark } from "lucide-react";
+import { Menu, User, Clock, MapPin, Flame, Bookmark, Brain, Zap, TrendingUp, Sparkles } from "lucide-react";
 import { ImageWithFallback } from "../components/figma/ImageWithFallback";
 
 export function HomeFeed() {
@@ -77,8 +77,53 @@ export function HomeFeed() {
         </div>
       </div>
 
+      {/* AI Features Quick Access */}
+      <div className="px-4 pt-4">
+        <div className="flex items-center justify-between mb-3">
+          <h2 className="text-lg text-[#0F1724]">AI Features</h2>
+          <Link to="/ai-dashboard" className="flex items-center gap-1 text-sm text-[#2F80ED] hover:text-[#1E5FC2]">
+            <span>View All</span>
+            <Sparkles className="w-4 h-4" />
+          </Link>
+        </div>
+        <div className="grid grid-cols-2 gap-3 mb-4">
+          <Link
+            to="/ai-analytics"
+            className="bg-gradient-to-br from-[#27AE60] to-[#1EBC70] rounded-xl p-4 text-white hover:shadow-lg transition-shadow"
+          >
+            <Brain className="w-8 h-8 mb-2" />
+            <div className="text-sm mb-1">Analytics</div>
+            <div className="text-xs text-white/80">Live insights</div>
+          </Link>
+          <Link
+            to="/mcp-agents"
+            className="bg-gradient-to-br from-[#00D4FF] to-[#2F80ED] rounded-xl p-4 text-white hover:shadow-lg transition-shadow"
+          >
+            <Zap className="w-8 h-8 mb-2" />
+            <div className="text-sm mb-1">MCP Agents</div>
+            <div className="text-xs text-white/80">Coordination</div>
+          </Link>
+          <Link
+            to="/nutrition-heatmap"
+            className="bg-gradient-to-br from-[#E23E3E] to-[#F6AD55] rounded-xl p-4 text-white hover:shadow-lg transition-shadow"
+          >
+            <MapPin className="w-8 h-8 mb-2" />
+            <div className="text-sm mb-1">Heatmap</div>
+            <div className="text-xs text-white/80">Nutrition gaps</div>
+          </Link>
+          <Link
+            to="/prophet-forecast"
+            className="bg-gradient-to-br from-[#F6AD55] to-[#F2C94C] rounded-xl p-4 text-white hover:shadow-lg transition-shadow"
+          >
+            <TrendingUp className="w-8 h-8 mb-2" />
+            <div className="text-sm mb-1">Forecast</div>
+            <div className="text-xs text-white/80">7-day Prophet</div>
+          </Link>
+        </div>
+      </div>
+
       {/* Feed */}
-      <div className="px-4 pt-4 space-y-4">
+      <div className="px-4 pt-2 space-y-4">
         {surplusItems.map((item) => (
           <div
             key={item.id}

@@ -1,7 +1,7 @@
 
-  # User dashboard
+  # NOURISH NET
 
-  This is a code bundle for User dashboard. The original project is available at https://www.figma.com/design/Q95G1z5iXGxWn92MIbutru/User-dashboard.
+  This is a code bundle for NOURISH NET. The original project is available at https://www.figma.com/design/Q95G1z5iXGxWn92MIbutru/NOURISH-NET.
 
   ## Running the code
 

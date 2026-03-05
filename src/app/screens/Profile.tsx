@@ -9,6 +9,9 @@ import {
   TrendingUp,
   Award,
   Heart,
+  Hexagon,
+  DollarSign,
+  Sparkles,
 } from "lucide-react";
 
 export function Profile() {
@@ -20,11 +23,32 @@ export function Profile() {
 
   const menuItems = [
     {
+      icon: Sparkles,
+      label: "AI Command Center",
+      link: "/ai-dashboard",
+      color: "text-[#00D4FF]",
+      bg: "bg-[#00D4FF]/10",
+    },
+    {
       icon: TrendingUp,
       label: "View Full Impact",
       link: "/impact",
       color: "text-[#27AE60]",
       bg: "bg-[#27AE60]/10",
+    },
+    {
+      icon: Hexagon,
+      label: "NFT Gallery",
+      link: "/nft-gallery",
+      color: "text-[#8B5CF6]",
+      bg: "bg-[#8B5CF6]/10",
+    },
+    {
+      icon: DollarSign,
+      label: "RL Pricing Optimizer",
+      link: "/rl-pricing",
+      color: "text-[#F6AD55]",
+      bg: "bg-[#F6AD55]/10",
     },
     {
       icon: Bell,
